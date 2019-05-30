@@ -180,7 +180,7 @@ public class DefaultClaimManager implements ClaimManager {
         List<ClaimMapping> claimList = new ArrayList<ClaimMapping>();
         Iterator<Entry<String, ClaimMapping>> iterator = claimMapping.entrySet().iterator();
 
-        for (; iterator.hasNext(); ) {
+        while (iterator.hasNext()) {
             ClaimMapping claimMapping = iterator.next().getValue();
             Claim claim = claimMapping.getClaim();
             if (claim.isSupportedByDefault()) {
